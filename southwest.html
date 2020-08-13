@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Virusopedia | South-West</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-tofit=no">
+        <meta name="keywords" content="virusopedia,virus,dictionary,library,virology,data Visualization">
+        <meta name="description" content="COVID-19 Data Visualization">
+        <meta name="author" content="X-Emmet">
+        <!--Main CSS-->
+        <link rel="stylesheet" href="css/Indexstyle.css">
+        <!-- Font Family -->
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        <!--Load the AJAX API-->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script src="https://www.google.com/jsapi"></script>
+    </head>
+    <body>
+        <div class="main d-flex justify-content-center">
+            <div class="first flex-column" id="first">
+                <nav class="navbar flex-column v-nav">
+                    <div class="show"> 
+                        <ul class="navbar-nav mr-auto" id="myTab"> 
+                            <li class="nav-item closebtn" onclick="closeNav()">    
+                                <a class="nav-link cross" data-toggle="tab" href="javascript:void(0)">&times;</a>  
+                            </li>  
+                            <li class="nav-item">    
+                                <a class="nav-link side-link" href="index.html">WORLD-WIDE</a>  
+                            </li>  
+                            <li class="nav-item">    
+                                <a class="nav-link side-link " href="nigeria.html">NIGERIA<span class="caret"></span></a>
+                            </li> 
+                            <li class="nav-item">    
+                                <a class="nav-link active side-link" href="southwest.html">SOUTH WEST</a>  
+                            </li> 
+                            <li class="nav-item">    
+                                <a class="nav-link side-link" href="support.html"> SUPPORT</a>  
+                            </li> 
+                            <li class="nav-item">    
+                                <a class="nav-link side-link" href="prevention.html">PREVENTION</a>  
+                            </li> 
+                            <li class="nav-item">    
+                                <a class="nav-link side-link" href="stigmatization.html">STIGMATIZATION</a> 
+                            </li> 
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="second" id="second">
+                <!-- Toast -->
+                <div class="toaster" id="toast" data-autohide="false">
+                    The Virusopedia Community Needs Your Support <a href="support.html"><button class="ml-4 support">Support Us</button></a> 
+                    <button type="button" class="close" >&times;</button>
+                </div>
+                <!--Navigation-->
+                <nav class="navbar sticky-top navbar-dark navbar-expand-lg" id="nav">
+                    <a class="navbar-brand" href="#"><p class="logo">Virusopedia <sub class="navbar-text">South-West</sub></p></a>
+                    <button class="navbar-toggler" onclick="openNav()" type="button" id="togbut">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse nigeria"> 
+                        <ul class="navbar-nav ml-auto" id="myTab"> 
+                            <li class="nav-item dropdown">    
+                                <a class="nav-link" href="#" id="dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NIGERIA<img style="-webkit-user-select: none;margin: auto; padding: 0; height: 25px;width: auto;" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/openmoji/252/flag-nigeria_1f1f3-1f1ec.png"><span class="caret"></span></a>
+                            </li> 
+                        </ul>
+                    </div>
+                </nav>
+                <div class="container-fluid third">
+                    <div class="d-flex flex-wrap justify-content-between container-fluid div1">
+                        <div class="confirmed ">
+                            <p style="color:rgb(250, 250, 250, 0.9);">Confirmed</p>
+                            <hr>
+                            <h3 style="color:rgb(250, 250, 250, 0.9);">20.4M &#9650;</h1>
+                        </div>
+                        <div class="activ ">
+                            <p style="color:rgb(250, 250, 250);">Active</p>
+                            <hr>
+                            <h3 style="color: rgb(250, 0, 0);">10M</h1>
+                        </div>
+                        <div class="discharged ">
+                            <p style="color:rgb(250, 250, 250, 0.9);">Recovered</p>
+                            <hr>
+                            <h3 style="color:rgb(0, 250, 0);">12.6M &#9650;</h1>
+                        </div>
+                        <div class="deaths ">
+                            <p style="color:rgb(250, 250, 250, 0.9);">Deaths</p>
+                            <hr>
+                            <h3 style="color:rgb(250, 0, 0);">745K &#9660;</h1>
+                        </div>
+                    </div>
+                    <div class="container-fluid d-flex flex-row justify-content-between div2">
+                        <!--Google Maps Api-->
+                        <div class="container" id="googleMap"></div>
+                        <div class="sub d-flex flex-column justify-content-between">
+                            <div class="countries" >
+                                <p style="color:rgb(250, 250, 250);">Countries</p>
+                                <hr>
+                                <h3 style="color:rgb(0, 250, 250);">177</h3>
+                            </div>
+                            <div class="mortality">
+                                <p style="color:rgb(250, 250, 250);">Mortality Rate</p>
+                                <hr>
+                                <h3 style="color:rgb(250, 0, 0);">4.30% &#9660;</h3>
+                            </div>
+                            <div class="recovery">
+                                <p style="color:rgb(250, 250, 250);">Recovery Rate</p>
+                                <hr>
+                                <h3 style="color:rgb(0, 250, 0);">29.30% &#9650;</h3>
+                            </div>
+                            <div class="time">
+                                <p style="color:rgb(250, 250, 250);">Time</p>
+                                <hr>
+                                <h3 style="color:rgb(250, 250, 250);" id="time"></h3>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="div3"> 
+                        <!--Div that will hold the pie chart-->
+                        <div class="container-fluid"  id="pie_div"></div>
+
+                        <!--Div that will hold the Bar chart-->
+                        <div class="container-fluid"  id="barchart"></div>
+                        
+                        <!-- Div that will hold the Graph -->
+                        <div class="container-fluid" id="graph_div" ></div>
+                    </div>
+                    <table class="table table-striped table-hover table-dark table-responsive-sm">
+                        <thead>
+                            <tr>
+                                <td>CONTINENT</td>
+                                <td>CONFIRMED</td>
+                                <td>ACTIVE</td>
+                                <td>RECOVERED</td>
+                                <td>DEATHS</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>AFRICA</td>
+                                <td>1,066,505</td>
+                                <td>78</td>
+                                <td>760,030</td>
+                                <td>23,886</td>
+                            </tr>
+                            <tr>
+                                <td>ANTARCTICA</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>ASIA</td>
+                                <td>4,023,872</td>
+                                <td>50</td>
+                                <td>50</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>AUSTRALASIA</td>
+                                <td>22,127</td>
+                                <td>15</td>
+                                <td>10</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>EROUPE</td>
+                                <td>3,124,530</td>
+                                <td>15</td>
+                                <td>10</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>NORTH AMERICA</td>
+                                <td>5,598,307</td>
+                                <td>15</td>
+                                <td>10</td>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <td>SOUTH AMERICA</td>
+                                <td>3,787,998</td>
+                                <td>15</td>
+                                <td>10</td>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                </div>
+            </div>
+        </div>    
+        <!--================================================ MAIN JS & PLUGINS ===========================================================-->
+        <!-- Main JS -->
+        <script type="text/javascript" src="js/Indexscript.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+        <!-- SW MAP -->
+        <script src="plugins/swmap.js"></script>
+        <!-- API PLUGIN J -->
+        <script src="plugins/swpluginjs.js"></script>
+        <!-- Bootstrap Js -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        <!-- Toast Script -->
+        <script>
+            $(document).ready(function(){
+              $('.toast').toast('show');
+            });
+            $(".close").click(function(){
+              $(".toaster").hide();
+            });
+            </script>
+        <!-- <script>
+            var encoded = "&#10071; Beware! Dear User, this website was developed by X-Emmet as an experimental work only! All information contained in this site may not be true. Viewer's discretion is adviced. X-Emmet will not be held responsible for any misleading information.";
+            var decoded = $("<div/>",{'class': 'newalert'}).html(encoded).text();
+            alert(decoded);
+        </script> -->
+    </body>
+</html>
