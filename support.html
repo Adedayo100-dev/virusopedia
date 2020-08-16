@@ -50,6 +50,9 @@
                 </nav>
             </div>
             <div class="second" id="second">
+                <div class="progress-container">
+                    <div class="progress-bar" id="myBar"></div>
+                </div>
                 <!--Navigation-->
                 <nav class="navbar sticky-top navbar-dark navbar-expand-lg" id="nav">
                     <a class="navbar-brand" href="#"><p class="logo">Virusopedia <sub class="navbar-text">Support</sub></p></a>
@@ -65,17 +68,57 @@
                     </div>
                 </nav>
                 <div class="container-fluid third">
-                    <div class="divcon">
+                    <div class="container-fluid divcon">
+                        <h5 style="text-indent: 0; color: red;">Report a Suspected Case of COVID-19</h5>
                         <!--Forms-->
-                        <form class="form-horizontal" role="form" action="" method="POST">
+                        <form class="form-horizontal" role="form" action="" method="POST" autocomplete="on">
+                            <div class="form-group">     
+                                <input type="text" class="form-control" id="name" placeholder="Full Name of Victim" required>    
+                            </div>  
+                            <div class="form-group">     
+                                <input type="email" class="form-control" id="email" placeholder="E-mail" required>    
+                            </div> 
+                            <div class="form-group">     
+                                <input type="number" class="form-control" id="age" placeholder="Age" min="0" max="100" required>    
+                            </div> 
+                            <select name="cars" class="custom-select mb-3" required>
+                                <option selected>Male</option>
+                                <option value="volvo">Female</option>
+                                <option value="fiat">Prefer not to say</option>
+                              </select>
+                            <div class="form-group">    
+                                <textarea name="" class="form-control"  rows="3" placeholder="Address" required></textarea>
+                            </div> 
+                            <small id="emailHelp" class="form-text text-muted" style="text-indent: 0; padding-bottom: 5px;">At the push of a button</small>  
+                            <button type="submit" class="btn">Report</button>
+                        </form>
+                    </div>
+                    <div class="container-fluid divcon">
+                        <h5 style="text-indent: 0; color: red;">Contribute To Our COVID-19 Awareness</h5>
+                        <!--Forms-->
+                        <form class="form-horizontal" role="form" action="" method="POST" autocomplete="on">
                             <div class="form-group">     
                                 <input type="email" class="form-control" id="name" placeholder="E-mail" required>    
                             </div>  
                             <div class="form-group">    
-                                <textarea name="" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Password"></textarea>
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+                                <textarea name="" class="form-control"  rows="3" placeholder="Message"></textarea>
+                                <small id="emailHelp" class="form-text text-muted" style="text-indent: 0;">We would love to know your suggestion</small>
                             </div>   
-                            <button type="submit" class="btn">Submit</button>
+                            <button type="submit" class="btn">Contribute</button>
+                        </form>
+                    </div>
+                    <div class="container-fluid divcon">
+                        <h5 style="text-indent: 0; color: red;">Contact Us</h5>
+                        <!--Forms-->
+                        <form class="form-horizontal" role="form" action="" method="POST" autocomplete="on">
+                            <div class="form-group">     
+                                <input type="email" class="form-control" id="name" placeholder="E-mail" required>    
+                            </div>  
+                            <div class="form-group">    
+                                <textarea name="" class="form-control"  rows="3" placeholder="Message"></textarea>
+                                <small id="emailHelp" class="form-text text-muted" style="text-indent: 0;">We would love to hear from you</small>
+                            </div>   
+                            <button type="submit" class="btn">Contact</button>
                         </form>
                     </div>
                 </div>
