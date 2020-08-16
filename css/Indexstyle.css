@@ -27,13 +27,15 @@ body{
 .cross:hover{
     color: white;
 }
+.cross:visited{
+    background-color: red !important;
+}
 .closebtn {
     font-size: 36px;
     text-align: end;
 }
 .show{
     width: 100%;
-    background-color: red;
 }
 .active{
     background-color: black;
@@ -53,6 +55,19 @@ body{
 }
 .second{
     width: 100%;
+}
+.progress-container{
+    position: fixed;
+    z-index: 1021;
+    top: 0;
+    width: 100%;
+    height: 5px;
+    background: #ffffff;
+}
+.progress-bar {
+    height: 5px;
+    background: red !important;
+    width: 0%;
 }
 .toaster{
     color: white;
@@ -107,6 +122,23 @@ button.navbar-toggler{
     margin: 30px 0;
     border-top: 1px solid red;
     border-bottom: 1px solid red;
+}
+.form-control, .custom-select{
+    color: red !important;
+    background-color: transparent !important;
+}
+option{
+    color: red;
+    background-color: white;
+}
+::placeholder{
+    color: white !important;
+}
+.btn{
+    background-color: red !important;
+}
+.btn:hover{
+    background-color: rgb(180, 0, 0) !important;
 }
 .confirmed, .activ, .discharged, .deaths{
     border-top: 1px solid red;
