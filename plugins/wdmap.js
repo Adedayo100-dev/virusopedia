@@ -5,11 +5,6 @@ function myMap() {
       zoom: 1.9,
       mapTypeId:google.maps.MapTypeId.HYBRID
   };
-  var marker = new google.maps.Marker({
-    position: new google.maps.LatLng(0,10),
-    animation:google.maps.Animation.BOUNCE
-  });
-  marker.setMap(map);
   var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 //Gooogle Maps Api Script 
