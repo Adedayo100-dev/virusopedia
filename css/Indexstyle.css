@@ -107,6 +107,9 @@ body{
 .navbar-brand{
     margin-left: 15px !important;
 }
+.navbar-toggler{
+    display: block !important;
+}
 button.navbar-toggler{
     border-color: transparent !important;
 }
