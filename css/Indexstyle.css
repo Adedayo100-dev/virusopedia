@@ -4,6 +4,12 @@
 body{
     background-color: #232020 !important;
 }
+body::-webkit-scrollbar{
+    display: none;
+}
+body{
+    -ms-overflow-style: none;
+}
 /*=====Font-Family=====*/
 .first{
     background-color: red;
@@ -139,6 +145,30 @@ option{
 }
 .btn:hover{
     background-color: rgb(180, 0, 0) !important;
+}
+.btd{
+    color: white !important;
+    background-color: red !important;
+}
+.nav-tabs{
+    border-bottom-color: red !important;
+}
+.nav-tabs .nav-link{
+    color: red;
+}
+.nav-tabs .nav-link:hover{
+    border-color: red !important;
+}
+.nav-tabs .nav-link.active{
+    background-color: red !important;
+    color: white !important;
+    border: 1px solid red !important;
+}
+.tab-pane.active{
+    /* background-color: transparent !important; */
+    padding-right: 15px;
+    padding-left: 15px;
+    border-right: none !important;
 }
 .confirmed, .activ, .discharged, .deaths{
     border-top: 1px solid red;
@@ -284,5 +314,4 @@ hr{
 }
 /* Extra large devices (large desktops, 1200px and lower) */
 @media only screen and (max-width: 1200px) {
-
 } 
