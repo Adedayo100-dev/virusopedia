@@ -5,8 +5,9 @@ function myMap() {
       zoom: 1.9,
       mapTypeId:google.maps.MapTypeId.HYBRID
   };
+  var myLatlng = new google.maps.LatLng(0,10);
   var marker = new google.maps.Marker({
-    position: LatLng(0,10),
+    position: myLatlng,
     animation:google.maps.Animation.BOUNCE
   });
   marker.setMap(map);
