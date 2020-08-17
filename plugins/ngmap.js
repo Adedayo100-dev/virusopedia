@@ -10,7 +10,7 @@ function myMap() {
 //Gooogle Maps Api Script 
 function loadScript() {
   var script = document.createElement("script");
-  script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyDQ3dLQ34MIXSbEkpVRuC72QpomY9jqhuk&callback=myMap";
+  script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDQ3dLQ34MIXSbEkpVRuC72QpomY9jqhuk&callback=myMap";
   document.body.appendChild(script);
 }
 window.onload = loadScript;
