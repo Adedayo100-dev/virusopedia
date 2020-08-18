@@ -66,7 +66,7 @@ function drawChart2() {
   ]);
 
   // Set chart options
-  var options = {'title':'South West Cases',
+  var options = {'title':'',
               'backgroundColor': 'red',
               // 'width':500,
               'height':400,
@@ -100,7 +100,7 @@ function drawChart() {
     curveType: 'function',
     backgroundColor: 'red',
     legend: { position: 'bottom'},
-    title: 'Nigeria Confirmed COVID-19 Spike',
+    title: 'World Confirmed COVID-19 Spike',
     height: 400,
     hAxis: {title: 'Month',  titleTextStyle: {color: 'white'}},
     vAxis: {title: 'Patients', minValue: 0, titleTextStyle: {color: 'white'}}
