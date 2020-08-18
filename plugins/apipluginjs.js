@@ -86,7 +86,7 @@ google.charts.setOnLoadCallback(drawChart);
 
 function drawChart() {
   var data = google.visualization.arrayToDataTable([
-    ['Month', 'Sales', 'Live Count'],
+    ['Month', 'Spike', 'Live Count'],
     ['Jan',  1000,      22],
     ['Feb',  1170,      460],
     ['March',  660,      5],
