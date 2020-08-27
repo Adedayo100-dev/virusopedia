@@ -51,10 +51,12 @@ body{
     color: white;
     padding-left: 10px !important;
     padding-right: 10px !important;
+    transition: all 0.5s ease-in-out;
 }
 .side-link:hover{
     color: white;
     background-color: #323437;
+    padding-left: 20px !important;
 }
 .side-link:active{
     background-color: black;
